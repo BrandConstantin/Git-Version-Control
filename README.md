@@ -19,7 +19,7 @@
   > git init
 * Get status of your local repository
   > git status
-  * > git status -s
+* > git status -s
 * Add the changes to staging area
   > git add localfile.txt
   > git add --all (for all the changes)
