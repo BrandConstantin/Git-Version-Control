@@ -1,9 +1,48 @@
 # Git-Version-Control
-* Elementary commands for
+
+## Definitions
+* Working copy - local copy where work
+* Trunk/Main/Master - contains the main development branch
+* Branch - line of development independent of another with a common history
+* Head - get the latest version of the repository
+
+  ## Configuration
+  > git config --global user.name "BrandConstantin"
+  > git config --global user.email "b.c@gmail.com"
+
+## Elementary commands for
 * Clone repository 
-    > git clone https://github.com/udacity/course-git-blog-project.git
-* Get status
-    > git status
+  > git clone https://github.com/udacity/course-git-blog-project.git
+* Init a project
+  > git init
+* Get status of your local repository
+  > git status
+  > git status -s
+* Add the changes to staging area
+  > git add localfile.txt
+  > git add --all (for all the changes)
+  > git add . (for all the changes)
+* Confirm the changes and prepare a history
+  > git commit -m "initial commit"
+* Send changes from local to remote (GitHub, GitLab or Bitbucket servers)
+  > git push origin main
+  > git push (if isn't the first time pushing)
+* Merge the file from your remote repository into your local repository
+  > git pull --all
+    
+## New branch
+* Create a new branch
+  > git branch future-branch
+* Use the new branch
+  > git checkout future-branch
+  
+## Merge branches
+* Chenge to main repository
+  > git chckout main
+* Merge the branches
+  > git merge future-branch
+* Send to the remote repository all the changes
+  > git push origin main
 
 ## Log
 * Show all commits
@@ -20,14 +59,6 @@
 ## Show
 * Show only one commit 
     > git show fdf5493 (use SHA, -p, -w, --patch, --state)
-* 3 steps to upload our changes
-    * Add to staging area 
-        > git add --all
-        > git add .
-    * Add to local repository 
-        > git commit -m “initial commit”
-    * Add to remote repository 
-        > git push
 
 ## Difference
 * Show difference 
@@ -125,9 +156,3 @@
     > git stash
 * To bring from staging area into local
     > git stash apply
-
-## Push
-* Add to remote repository 
-    > git push
-* Add from local repository to remote repository
-    > git push origin master
