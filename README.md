@@ -19,16 +19,21 @@
   > git init
 * Get status of your local repository
   > git status
+* Another form of graphical form to get the status of your local repository
   > git status -s
 * Add the changes to staging area
+  * One file 
   > git add localfile.txt
-  > git add --all (for all the changes)
-  > git add . (for all the changes)
+  * For all the changes
+  > git add --all
+  * Another way for all the changes
+  > git add .
 * Confirm the changes and prepare a history
   > git commit -m "initial commit"
 * Send changes from local to remote (GitHub, GitLab or Bitbucket servers)
   > git push origin main
-  > git push (if isn't the first time pushing)
+  * if isn't the first time pushing
+  > git push
 * Merge the file from your remote repository into your local repository
   > git pull --all
     
