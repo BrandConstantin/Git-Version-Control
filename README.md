@@ -7,8 +7,10 @@
 * Head - get the latest version of the repository
 
   ## Configuration
-  > git config --global user.name "BrandConstantin"
-  > git config --global user.email "b.c@gmail.com"
+  * config user name
+    > git config --global user.name "BrandConstantin"
+  * config email
+    > git config --global user.email "b.c@gmail.com"
 
 ## Elementary commands for
 * Clone repository 
@@ -17,7 +19,7 @@
   > git init
 * Get status of your local repository
   > git status
-  > git status -s
+  * > git status -s
 * Add the changes to staging area
   > git add localfile.txt
   > git add --all (for all the changes)
