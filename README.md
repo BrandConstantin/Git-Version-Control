@@ -51,6 +51,11 @@
 * Send to the remote repository all the changes
   > git push origin main
 
+## Create repository into remote and save to local
+> git fetch && git checkout my-updates
+* Change some file and apply changes: add, commit and push
+> git push origin my-updates
+
 ## Log
 * Show all commits
     > git log (use q to quit)
