@@ -56,6 +56,38 @@
 * Change some file and apply changes: add, commit and push
 > git push origin my-updates
 
+## Branches
+* Create branch
+  > git branch test1
+* Show all branches 
+  > git branch
+* Show all branches inclusive remote 
+  > git branch -a
+* Show all branches inclusive flags 
+  > git branch -a -v
+* When push the first time
+  > git push origin test1
+* Create branch from other, in this case from master
+  > git branch newbranch master
+* Create branch and switch to 
+  > git checkout -b otherbranch
+* Switch between branches 
+  > git checkout otherbranch
+* Delete branch 
+  > git branch -d newbranch
+* Force delete branch 
+  > git branch -D newbranch
+
+## Pull
+* Get all changes remotely to local
+  > git pull
+
+## Merge
+* Merge from master to other branch
+    > git merge master newbranch
+* Share your code with others, send from local to remote
+    > git push origin master
+    
 ## Log
 * Show all commits
     > git log (use q to quit)
@@ -91,25 +123,6 @@
 * Add tag to a past commit 
     > git tag -a v1.0 a87894
 
-## Branches
-* Show all branches 
-    > git branch
-* Show all branches inclusive remote 
-    > git branch -a
-* Show all branches inclusive flags 
-    > git branch -a -v
-* Create branch 
-    > git branch newbranch
-* Create branch from other 
-    > git branch newbranch master
-    > git checkout -b otherbranch (create and switch to it all)
-* Switch between branches 
-    > git checkout otherbranch
-* Delete branch 
-    > git branch -d newbranch
-* Force delete branch 
-    > git branch -D newbranch
-
 ## Revert/Alter/Erase
 * Reverting commit 
     > git revert <sha-of-commit>
@@ -134,13 +147,6 @@
     > git revert 434bg1
 * Reverse from a HEAD to another 
     > git revert HEAD...HEAD~2 --no-edit
-
-## Merge
-* Join two branches 
-    > git merge newbranch otherbranch
-    > git merge newbranch master
-* Share your code with others 
-    > git push origin master
 
 ## Blame
 * Who made the changes? 
