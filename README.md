@@ -6,7 +6,7 @@
 * Branch - line of development independent of another with a common history
 * Head - get the latest version of the repository
 
-  ## Configuration
+## Configuration
   * config user name
     > git config --global user.name "BrandConstantin"
   * config email
@@ -90,14 +90,24 @@
 * Share your code with others, send from local to remote
   > git push origin master
 
-## Revert & Reset
-* Reverting commit, revert changes made by a commit
-  > git revert <sha-of-commit>
+## Reset
 * Alter commit 
   > git commit --amend
-* Erase previous commit 
-  > git reset --hard HEAD~1    
+* Erase previous commit (never used)
+  > git reset --hard HEAD~1
+* Reset all at the confirmation that need, erase the other one
+  > git reset --soft 52f823c
+* Reset multiple
+  > git reset 1a6a403
+* To show the reference records of the resets performed
+  > git reflog
+* To reset and restore from a Head point
+  > git reset --hard HEAD@{3}
 
+## Revert
+* Reverting commit, revert changes made by a commit
+  > git revert <hash>
+  
 ## Log
 * Show all commits (use q to quit), with his author, name of branches etc
   > git log
@@ -116,15 +126,19 @@
 * By a string
   > git log --grep="ticket"
 * Show the last 2 changes 
-    > git log -n 2
-* 
-    > git log --since="2 weeks ago" --until="2 days ago"
-    > git log --pretty=format:"%h - %an, %ar : %s"
-    > git log -p fdf5393
-
+  > git log -n 2
+* From and To
+  > git log --since="2 weeks ago" --until="2 days ago"
+* Pretty format
+  > git log --pretty=format:"%h - %an, %ar : %s"
+* Show a commit with his changes in pretty format
+  > git log -p 1c3e78f6
+* Show the changes, added and deleted
+  > git log -p
+  
 ## Show
-* Show only one commit, with his chenges (use SHA, -p, -w, --patch, --state)
-    > git show fdf5493
+* Show only one commit, with his chenges and all the information (use SHA, -p, -w, --patch, --state)
+    > git show 1c3e78f6
 
 ## Difference
 * Show difference 
