@@ -7,16 +7,24 @@
 * Head - get the latest version of the repository
 
 ## Configuration
-  * config user name
-    > git config --global user.name "BrandConstantin"
-  * config email
-    > git config --global user.email "b.c@gmail.com"
+* config user name
+  > git config --global user.name "BrandConstantin"
+* config email
+  > git config --global user.email "b.c@gmail.com"
+* Edid the configuration
+  > git config --global --edit
+* Create keyboard shortcuts, in this example "ci" for commit
+  > git config --global alias.ci commit
+* Select text editor
+  > git config --global core.editor vim
 
 ## Elementary commands for
 * Clone repository 
   > git clone https://github.com/udacity/course-git-blog-project.git
 * Init a project
   > git init
+* To create a remote and central repository where the commit it is imposible to realize directly
+  > git init --bare
 * Get status of your local repository
   > git status
 * Another form of graphical form to get the status of your local repository
