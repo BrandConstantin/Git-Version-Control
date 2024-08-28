@@ -55,6 +55,8 @@
 > git fetch && git checkout my-updates
 * Change some file and apply changes: add, commit and push
 > git push origin my-updates
+* Establish the remote repository
+> git remote add origin <url repo GitHub>
 
 ## Branches
 * Create branch
@@ -84,25 +86,45 @@
 
 ## Merge
 * Merge from master to other branch
-    > git merge master newbranch
+  > git merge master newbranch
 * Share your code with others, send from local to remote
-    > git push origin master
-    
+  > git push origin master
+
+## Revert & Reset
+* Reverting commit, revert changes made by a commit
+  > git revert <sha-of-commit>
+* Alter commit 
+  > git commit --amend
+* Erase previous commit 
+  > git reset --hard HEAD~1    
+
 ## Log
-* Show all commits
-    > git log (use q to quit)
-    > git log --stat
-    > git log --online
-    > git log --p
-* Show 2 changes back 
-    > git log --p -n 2
+* Show all commits (use q to quit), with his author, name of branches etc
+  > git log
+* Get his author, name of branches etc, and number of deleting and adding
+  > git log --stat
+* All the commits with name and hash only
+  > git log --online
+* After a date
+  > git log --after 2024-08-28
+* Before a date
+  > git log --before "yyyy-mm-dd"
+* By number of confirmation, in this case the last 10 confirmations
+  > git log -10
+* By author
+  > git log --author="Alana"
+* By a string
+  > git log --grep="ticket"
+* Show the last 2 changes 
+    > git log -n 2
+* 
     > git log --since="2 weeks ago" --until="2 days ago"
     > git log --pretty=format:"%h - %an, %ar : %s"
     > git log -p fdf5393
 
 ## Show
-* Show only one commit 
-    > git show fdf5493 (use SHA, -p, -w, --patch, --state)
+* Show only one commit, with his chenges (use SHA, -p, -w, --patch, --state)
+    > git show fdf5493
 
 ## Difference
 * Show difference 
@@ -122,14 +144,6 @@
     > git tag -d v1.0
 * Add tag to a past commit 
     > git tag -a v1.0 a87894
-
-## Revert/Alter/Erase
-* Reverting commit 
-    > git revert <sha-of-commit>
-* Alter commit 
-    > git commit --amend
-* Erase previous commit 
-    > git reset --hard HEAD~1
 
 ## Undo changes (only in commit area)
 * Undo changes for a group of files 
