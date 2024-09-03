@@ -7,6 +7,7 @@
 * Head - get the latest version of the repository
 
 ## Configuration
+* Tags: --local, --global, --system
 * config user name
   > git config --global user.name "BrandConstantin"
 * config email
@@ -14,9 +15,17 @@
 * Edid the configuration
   > git config --global --edit
 * Create keyboard shortcuts, in this example "ci" for commit
+* Alias for: alias.co (checkout), alias.br (branch), alias.st (status), alias.ci
   > git config --global alias.ci commit
 * Select text editor
   > git config --global core.editor vim
+* Text editor like Sublime for Win 64 bits
+  > git config --global core.editor "'c:/program files/sublime text 3/sublimetext.exe' -w"
+* For merge tools
+  > git config --global merge.tool kdiff3
+* Show colored git (color.ui, color.diff, color.branch, color.grep, color.status, color.showBranch)
+* Colors: black, red, green, yellow, blue, magenta, cyan, white
+  > git config --global color.ui false
 
 ## Elementary commands for
 * Clone repository 
@@ -98,7 +107,7 @@
 * Share your code with others, send from local to remote
   > git push origin master
 
-## Reset
+## Reset (used to undo a commit or snapshot prepared with commit)
 * Alter commit 
   > git commit --amend
 * Erase previous commit (never used)
@@ -146,15 +155,62 @@
   
 ## Show
 * Show only one commit, with his chenges and all the information (use SHA, -p, -w, --patch, --state)
-    > git show 1c3e78f6
+  > git show 1c3e78f6
 
 ## Difference
 * Show difference 
-    > git diff
-    > git difftool
+  > git diff a/file.txt b/file.txt
+* Highlight changes
+  > gir diff --color-words
+* All changed from the last confirmation
+  > git diff
+* campare between two confirmations (git log --pretty=oneline)
+  > git diff 957fbc92b123030c389bf8b4b874522bdf2db72c ce489262a1ee34340440e55a0b99ea6918e19e7a
+* Compare branches
+  > git diff branch1...other-feature-branch
+* Compare a file between two branches
+  > git diff main new_branch ./diff_test.txt
+  > git difftool
 * Show the changes in staging area, not in commit area
-    > git diff --cached
+  > git diff --cached ./path/to/file
 
+## Stash (to store in a temporary place, in staging)
+* Store “in a photo” what staging with git add
+   > git stash
+* Apply the changed from a stash
+  > git stash pop
+* Apply the changed from a stash
+  > git stash pop stash@{2}
+* To bring from staging area into local, and ready to commit 
+   > git stash apply
+* Add to stash untracked files
+  > git stash -u (or --include-untracked)
+* Add to stash ignored files
+  > git stash -a
+* List of stash
+  > git stash list
+* Save stash with a message
+  > git stash save "add style to our site"
+* Show difference between stash
+  > git stash show
+* Show difference between all stash
+  > git stash show -p (or --patch)
+* Create branch from a stash
+  > git stash branch add-stylesheet stash@{1}
+* Drop a stash
+  > git stash drop stash@{1}
+* Delete all the stash
+  > git stash clear
+  
+## Gitignore patterns:
+* All directory with this name
+  > **/logs
+* All this files in a directory name logs
+  > **/logs/debug.log
+* All the files with this extension
+  > .log
+* 
+    
 ## Tags
 * Add tag to project 
     > git tag -a v1.0
@@ -204,9 +260,4 @@
 ## Amend (you have to do git add again and then git commit again)
 * If you commit but forget something 
     > git commit --amend
-
-## Stash (to store in a temporary place what we have staging)
-* Store “in a photo” what staging with git add
-    > git stash
-* To bring from staging area into local
-    > git stash apply
+    
