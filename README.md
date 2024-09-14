@@ -203,26 +203,61 @@
   > git stash clear
   
 ## Gitignore patterns:
+* A file that was previously commited
+  > git rm --cached debug.log | git commit -m "start ignore this file"
+* To force a ignored file
+  > git add -f debug.log
 * All directory with this name
   > **/logs
 * All this files in a directory name logs
   > **/logs/debug.log
 * All the files with this extension
   > .log
-* 
+* With a match character (yes debug0.log and debug1.log but not debug10.log)
+  > debug?.log
+* Match with this coincidence
+  > debug[0-9].log
+* Not match with this coincidence (yes debug2.log but not debug0.log, debug1.log or debug01.log)
+  > debug[!01].log
+* Math with any file and directory with this name
+  > logs
+* Ignore all the directory with this name
+  > logs/
+* With the one or more directory (logs/debug.log, logs/monaday/pm/debug.log)
+  > logs/**/debug.log
+* Ignore directory with the name (yes logs/monday/debug.log but not logs/latest/debug.log)
+  > logs/*day/debug.log
+* For escape characters, in this case file foo[1].txt
+  > foo\[1\].txt
     
-## Tags
+## Tags (it's like a branch that never change, and used for publish a version)
 * Add tag to project 
-    > git tag -a v1.0
-    > git tag -a v1.5 -m "This is version1.5"
+  > git tag -a v1.0
+* Add a tag with a message
+  > git tag -a v1.5 -m "This is version 1.5"
 * Show all tag 
-    > git tag
-    > git show v1.5
+  > git tag
+* Show a tag
+  > git show v1.5
+* Show tags that have a match
+  > git show -l *-rc*
+* Tag an old commit
+  > git tag -a v1.2 ab45d0y
+* Add to origin a tag
+  > git push origin v1.4
+* Checkout
+  > git checkout v1.3
 * Delete tag 
-    > git tag -d v1.0
-* Add tag to a past commit 
-    > git tag -a v1.0 a87894
+  > git tag -d v1.0
 
+## Blame
+* Who made the changes? 
+    > git blame file1
+* Who made the changes between line 6 and 8
+    > git blame -L 6.8 index.html
+* Show the email who made the changes
+    > git blame --show-email file1
+    
 ## Undo changes (only in commit area)
 * Undo changes for a group of files 
     > git checkout -- .
@@ -239,14 +274,6 @@
     > git revert 434bg1
 * Reverse from a HEAD to another 
     > git revert HEAD...HEAD~2 --no-edit
-
-## Blame
-* Who made the changes? 
-    > git blame file1
-* Who made the changes between line 6 and 8
-    > git blame -L 6.8 index.html
-* Show the email who made the changes
-    > git blame --show-email file1
 
 ## Picking (very dangerous command)
 * Reverse what we have launched 
