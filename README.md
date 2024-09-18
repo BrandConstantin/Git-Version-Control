@@ -74,6 +74,8 @@
 > git push origin my-updates
 * Establish the remote repository
 > git remote add origin <url repo GitHub>
+* Show if the login with the github is ssh type or other
+> git remote show origin
 
 ## Branches
 * Create branch
@@ -252,39 +254,42 @@
 
 ## Blame
 * Who made the changes? 
-    > git blame file1
+  > git blame file1
 * Who made the changes between line 6 and 8
-    > git blame -L 6.8 index.html
+  > git blame -L 6.8 index.html
 * Show the email who made the changes
-    > git blame --show-email file1
+  > git blame --show-email file1
     
 ## Undo changes (only in commit area)
 * Undo changes for a group of files 
-    > git checkout -- .
+  > git checkout -- .
 * Undo changes for a file 
-    > git checkout -- file1
-    > git checkout HEAD -- .
+  > git checkout -- file1
+  > git checkout HEAD -- .
 
 ## Undo changes (only in staging area)
 * Undo a file 
-    > git reset HEAD file1
+  > git reset HEAD file1
 * Delete all in staging and go to a previous status
-    > git reset --hard HEAD~1
+  > git reset --hard HEAD~1
 * Reverse SHA 
-    > git revert 434bg1
+  > git revert 434bg1
 * Reverse from a HEAD to another 
-    > git revert HEAD...HEAD~2 --no-edit
+  > git revert HEAD...HEAD~2 --no-edit
 
 ## Picking (very dangerous command)
 * Reverse what we have launched 
-    > git cherry-pick --abort
-    > git cherry-pick --continue
+ > git cherry-pick --abort
+* Continue to commit 
+ > git cherry-pick --continue
+* Combine with other commit
+ > git cherry-pick 054af4g
 
 ## Rebase
 * Condense all the changes of a project
-    > git rebase --interactive --root
+ > git rebase --interactive --root
 
 ## Amend (you have to do git add again and then git commit again)
 * If you commit but forget something 
-    > git commit --amend
+ > git commit --amend
     
