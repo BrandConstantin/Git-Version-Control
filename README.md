@@ -12,6 +12,8 @@
   > git config --global user.name "BrandConstantin"
 * config email
   > git config --global user.email "b.c@gmail.com"
+* config password (the password save in text plain)
+  > git config --global user.password "Hdfi43245#~2s"
 * Edid the configuration
   > git config --global --edit
 * Create keyboard shortcuts, in this example "ci" for commit
