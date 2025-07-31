@@ -23,7 +23,7 @@ Version control system / source code manager abbreviated as VCS is a tool that m
 1 Create a new branch from other 
   > git checkout -b myfeature master
 2 Switch to the new branch
-  >  git checkout myfeature
+  > git checkout myfeature
 3 Show the status
   > git status
 4 Add all
