@@ -3,10 +3,10 @@
 Version control system / source code manager abbreviated as VCS is a tool that manages different versions of source code.
 
 Advantages:
-• They are scalable for complex development projects
-• They allow for the creation and management of backups
-• They make it easier for developers to synchronize with the latest version
-• They allow for code audits, isolated testing, and version history maintenance
+* They are scalable for complex development projects
+* They allow for the creation and management of backups
+* They make it easier for developers to synchronize with the latest version
+* They allow for code audits, isolated testing, and version history maintenance
 
 Terminology
 * Working copy - local copy where work
