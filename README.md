@@ -19,15 +19,23 @@ Version control system / source code manager abbreviated as VCS is a tool that m
 * Staging area / staging index / index a file in the git directory that stores information about what will go into your next commit.
 * Commit -> save the state of your project in Git
 
-## Steps for work
-1 Create a new branch from other > git checkout -b myfeature master
-2 Switch to the new branch > git checkout myfeature
-3 Show the status > git status
-4 Add all > git add .
-5 Initial commit > git commit -m “initial commit”
-6 Join the remote branch with local > git merge --no-f myfeature
-7 Bring the changes made from others > git pull
-8 Push from local to remote to share with others (only the first time) > git push origin myfeature
+## Steps to work
+1 Create a new branch from other 
+> git checkout -b myfeature master
+2 Switch to the new branch
+>  git checkout myfeature
+3 Show the status
+> git status
+4 Add all
+> git add .
+5 Initial commit
+> git commit -m “initial commit”
+6 Join the remote branch with local
+> git merge --no-f myfeature
+7 Bring the changes made from others
+> git pull
+8 Push from local to remote to share with others (only the first time)
+> git push origin myfeature
 
 ## Git Configuration
 ### First time configuration
