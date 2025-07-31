@@ -1,10 +1,24 @@
 # Git-Version-Control
 
-## Definitions
+Version control system / source code manager abbreviated as VCS is a tool that manages different versions of source code.
+
+Advantages:
+• They are scalable for complex development projects
+• They allow for the creation and management of backups
+• They make it easier for developers to synchronize with the latest version
+• They allow for code audits, isolated testing, and version history maintenance
+
+Terminology
 * Working copy - local copy where work
 * Trunk/Main/Master - contains the main development branch
 * Branch - line of development independent of another with a common history
 * Head - get the latest version of the repository
+* Repository - it is the place where all the information of a project is stored, usually in  the form of a tree. Is the directory which contains your project work
+* Sha is an id number for each commit.
+* Checkout is when content in the repository has been copied to the workig directory.
+* Staging area / staging index / index a file in the git directory that stores information about what will go into your next commit.
+* Commit -> save the state of your project in Git
+
 
 ## Configuration
 * Tags: --local, --global, --system
