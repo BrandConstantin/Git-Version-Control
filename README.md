@@ -43,6 +43,12 @@ Terminology
 * Show colored git (color.ui, color.diff, color.branch, color.grep, color.status, color.showBranch)
 * Colors: black, red, green, yellow, blue, magenta, cyan, white
   > git config --global color.ui false
+* Makes sure that Git output is colored
+  > git config --global color.ui auto
+* Displays the original state in a conflict
+  >  git config --global merge.conflictstyle diff3
+* Config list
+  > git config -list
 
 ## Elementary commands for
 * Clone repository 
@@ -105,7 +111,7 @@ Terminology
   > git branch -a -v
 * When push the first time
   > git push origin test1
-* Create branch from other, in this case from master
+* Create new branch from other branch, in this case from master
   > git branch newbranch master
 * Create branch and switch to 
   > git checkout -b otherbranch
@@ -151,7 +157,9 @@ Terminology
   > git log --stat
 * All the commits with name and hash only
   > git log --online
-* After a date
+* to show some details that are hidden from the default view
+  > git log --online --decorate
+*   After a date
   > git log --after 2024-08-28
 * Before a date
   > git log --before "yyyy-mm-dd"
@@ -222,6 +230,7 @@ Terminology
   > git stash clear
   
 ## Gitignore patterns:
+* Mark line as a comment with #
 * A file that was previously commited
   > git rm --cached debug.log | git commit -m "start ignore this file"
 * To force a ignored file
