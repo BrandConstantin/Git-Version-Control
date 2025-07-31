@@ -21,21 +21,21 @@ Version control system / source code manager abbreviated as VCS is a tool that m
 
 ## Steps to work
 1 Create a new branch from other 
-> git checkout -b myfeature master
+  > git checkout -b myfeature master
 2 Switch to the new branch
->  git checkout myfeature
+  >  git checkout myfeature
 3 Show the status
-> git status
+  > git status
 4 Add all
-> git add .
+  > git add .
 5 Initial commit
-> git commit -m “initial commit”
+  > git commit -m “initial commit”
 6 Join the remote branch with local
-> git merge --no-f myfeature
+  > git merge --no-f myfeature
 7 Bring the changes made from others
-> git pull
+  > git pull
 8 Push from local to remote to share with others (only the first time)
-> git push origin myfeature
+  > git push origin myfeature
 
 ## Git Configuration
 ### First time configuration
