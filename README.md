@@ -20,7 +20,8 @@ Terminology
 * Commit -> save the state of your project in Git
 
 
-## Configuration
+## Git Configuration
+### First time configuration
 * Tags: --local, --global, --system
 * config user name
   > git config --global user.name "BrandConstantin"
