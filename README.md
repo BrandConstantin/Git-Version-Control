@@ -87,9 +87,9 @@ Version control system / source code manager abbreviated as VCS is a tool that m
   > git add .
 * Confirm the changes and prepare a history
   > git commit -m "initial commit"
-* Send changes from local to remote (GitHub, GitLab or Bitbucket servers)
+* Send changes from local to remote (GitHub, GitLab or Bitbucket servers), pushing the first time
   > git push origin main
-  * if isn't the first time pushing
+* Pushing when the branch it is in remote to
   > git push
 * Merge the file from your remote repository into your local repository
   > git pull --all
@@ -126,9 +126,9 @@ Version control system / source code manager abbreviated as VCS is a tool that m
   > git checkout -b otherbranch
 * Switch between branches 
   > git checkout otherbranch
-* Delete branch 
+* Delete branch, without commits 
   > git branch -d newbranch
-* Force delete branch 
+* Force delete branch,with commits  
   > git branch -D newbranch
 
 ## Pull
@@ -140,7 +140,8 @@ Version control system / source code manager abbreviated as VCS is a tool that m
   > git merge master newbranch
 * Share your code with others, send from local to remote
   > git push origin master
-The editor has the following merge conflict indicators:
+
+If the editor has the following merge conflict indicators:
 ```
 <<<<<<< HEAD everything below this line (until the next indicator) shows you what's on the current 
 branch
@@ -207,7 +208,7 @@ branch that's being merged in
 * Show difference 
   > git diff a/file.txt b/file.txt
 * Highlight changes
-  > gir diff --color-words
+  > git diff --color-words
 * All changed from the last confirmation
   > git diff
 * campare between two confirmations (git log --pretty=oneline)
