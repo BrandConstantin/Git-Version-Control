@@ -343,7 +343,8 @@ branch that's being merged in
 Example: feat/actualizaciones/main/ticket-13654
 * feat: a new feature
 * fix: a bug fix
-* docs: changes to documentation•style: formatting, missing semi colons, etc; no code change
+* docs: changes to documentation
+* style: formatting, missing semi colons, etc; no code change
 * refactor: refactoring production code
 * test: adding tests, refactoring test; no production code change
 * chore: updating build tasks, package manager configs, etc; no production code change
